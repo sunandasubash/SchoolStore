@@ -1,0 +1,18 @@
+<!-- student_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+</head>
+<body>
+    <h1>Student Information Form</h1>
+
+    <form method="post" action="{% url 'student_form' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
